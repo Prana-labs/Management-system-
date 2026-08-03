@@ -5,7 +5,9 @@
             "age": 23,
             "email": "priy@adad.",
             "roll_no": 1,
-            "grades": {}
+            "grades": {
+                "hindi": 99.0
+            }
         },
         {
             "name": "rana",

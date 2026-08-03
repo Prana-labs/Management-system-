@@ -61,7 +61,7 @@ class Student(Persons):
             "name" : name,
             "age" : age,
             "email" : email,
-            "roll_no": roll_no,
+            "roll_no":roll_no,
             "grades" : {}
 
         })
@@ -71,6 +71,20 @@ class Student(Persons):
 
     def show_details(self):
         pass
+
+    def add_grad(self):
+        roll_no = int(input("tell the roll number :- "))
+
+        for i in data['students']:
+            if i["roll_no"] ==roll_no:
+                subject = input("Subject : ")
+                marks = float(input("Marks : "))
+                i['grades'][subject] = marks
+                save()
+                print("grade added successfully")
+                return
+        print("student not found")    
+
 
     def registered(self):
         pass 
@@ -132,3 +146,6 @@ if choice == 1:
     stud.register()
 elif choice == 2:
     teache.register()
+elif choice == 3:
+    stud.add_grad()
+
