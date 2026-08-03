@@ -67,7 +67,7 @@ class Student(Persons):
         })
 
         save()
-        print(f"student {name} registered!!")
+        print(f"Student {name} has registered!!")
 
     def show_details(self):
         pass
@@ -75,8 +75,50 @@ class Student(Persons):
     def registered(self):
         pass 
 
+class Teacher(Persons):
+
+    def get_roles(self):
+        return "student"
+    
+    def register(self):
+        name = input("tell your name :- ")
+        age = int(input("tell your age :- "))
+        email = input("tell your email :- ")
+        subject = input("tell your subject :- ")
+        emp_id = int(input("tell your emp_id :- "))
+
+        if not Persons.validate_email(email):
+            print("invalid Email")
+            return
+        
+        for i in data['teacher']:
+            if i['emp_id'] == emp_id:
+                print("student already exist")
+                return
+            
+
+        data['teacher'].append({
+            "name" : name,
+            "age" : age,
+            "email" : email,
+            "subject" : subject,
+            "emp_id": emp_id,
+        })
+        save()
+        print(f"Teacher {name} has registered!!")
+
+    def show_details(self):
+        pass
+
+    def registered(self):
+        pass
+
+    
+
+
 
 stud = Student()
+teache = Teacher()
 
 print("press 1 to register a student")
 print("press 2 to register a teacher")
@@ -88,3 +130,5 @@ choice = int(input("please tell your your choice"))
 
 if choice == 1:
     stud.register()
+elif choice == 2:
+    teache.register()

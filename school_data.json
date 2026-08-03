@@ -6,7 +6,22 @@
             "email": "priy@adad.",
             "roll_no": 1,
             "grades": {}
+        },
+        {
+            "name": "rana",
+            "age": 22,
+            "email": "@.",
+            "roll_no": 2,
+            "grades": {}
         }
     ],
-    "teacher": []
+    "teacher": [
+        {
+            "name": "not your collage",
+            "age": 23,
+            "email": "not@your.collage",
+            "subject": "python",
+            "emp_id": 1
+        }
+    ]
 }
