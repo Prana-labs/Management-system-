@@ -1,0 +1,12 @@
+{
+    "students": [
+        {
+            "name": "priyanshu ",
+            "age": 23,
+            "email": "priy@adad.",
+            "roll_no": 1,
+            "grades": {}
+        }
+    ],
+    "teacher": []
+}
